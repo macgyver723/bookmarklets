@@ -19,11 +19,15 @@ function fillOneComment(row, headerText) {
     commentTextArea.dispatchEvent(new Event('input'));
 }
 
-let studentNum = window.prompt("Enter student number");
-let allTrs = document.getElementsByTagName('tr');
-let headerText = Array.from(
-    	allTrs[0].getElementsByTagName('th'))
-    	.map(elem => elem.innerText.slice(0,1)
-    	);
+function makeCompetencyNote() {
+    let studentNum = window.prompt("Enter student number");
+	let allTrs = document.getElementsByTagName('tr');
+	let headerText = Array.from(
+		allTrs[0].getElementsByTagName('th'))
+		.map(elem => elem.innerText.slice(0,1)
+		);
 
-fillOneComment(allTrs[studentNum], headerText);
+	fillOneComment(allTrs[studentNum], headerText);	
+}
+
+makeCompetencyNote();
