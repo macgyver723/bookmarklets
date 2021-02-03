@@ -1,4 +1,4 @@
-javascript: (function() {
+function highlightFs() {
     let allCells = document.getElementsByTagName('td');
     for (var i = 0; i < allCells.length; i++) {
         if (allCells[i].innerText.slice(0, 1) == 'F') {
@@ -6,4 +6,6 @@ javascript: (function() {
             allCells[i].style.color = "#000000";
         }
     }
-})();
+}
+
+highlightFs();
