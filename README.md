@@ -1,4 +1,4 @@
 # bookmarklets
 
-Here is a collection of bookmarklets that I've created in hopes they may be helpful to others. Open up the folder for the bookmarklet you're interested in and follow the instructions to use it.
+Here is a collection of bookmarklets that I've created in hopes they may be helpful to others. You can view the code to each bookmarklet here. To install, I recommend using [this site](https://BookMarklets.stefanfritz.repl.co)
 
