@@ -1,90 +1,117 @@
 javascript: (function() {
     let sectionId = window.location.href.split('=')[1];
-    const q2Date = new Date(2022,0,13);
-    const q3Date = new Date(2022,2,25);
-    const q4Date = new Date(2022,5,9);
-    const skillsCategory = 1666;
-    const assignmentsCategory = 1665;
+    const q1Date = new Date(2022,9,28); // 0 -> Jan
+    const q2Date = new Date(2023,0,12);
+    const q3Date = new Date(2023,2,24);
+    const q4ADate = new Date(2023,4,31);
+    const q4BDate = new Date(2023,5,2);
+    const skillsCategory = 1666;        // confirm this number each use
+    const assignmentsCategory = 1665;   // confirm this number
     const assignments = [
         {
-            name: 'Contract',
+            name: 'Q1.1 Contract',
+            competency: assignmentsCategory,
+            dueDate: q1Date
+        },
+        {
+            name: 'Q1.2 Organization',
+            competency: assignmentsCategory,
+            dueDate: q1Date
+        },
+        {
+            name: 'Q1.3 Project Commitment',
+            competency: assignmentsCategory,
+            dueDate: q1Date
+        },
+        {
+            name: 'Q1.4 Meeting Attendance',
+            competency: assignmentsCategory,
+            dueDate: q1Date
+        },
+        {
+            name: 'Q1.5 2 Assignment Summary Q1',
+            competency: skillsCategory,
+            dueDate: q1Date
+        },
+        {
+            name: 'Q2.6 Project Commitment Form',
             competency: assignmentsCategory,
             dueDate: q2Date
         },
         {
-            name: 'Organization',
+            name: 'Q2.7 Research Annotated Bibligraphy',
             competency: assignmentsCategory,
             dueDate: q2Date
         },
         {
-            name: 'Project Commitment',
+            name: 'Q2.8 AOK Planning',
             competency: assignmentsCategory,
             dueDate: q2Date
         },
         {
-            name: 'Q2 Attendance',
+            name: 'Q2.9 Completed Q1',
             competency: assignmentsCategory,
             dueDate: q2Date
         },
         {
-            name: '*Q2 Assignment Summary',
+            name: 'Q2.10 Assignment Summary Q2',
             competency: skillsCategory,
             dueDate: q2Date
         },
         {
-            name: 'Project Verification Meeting',
+            name: 'Q3.11 AOK Progress Check',
             competency: assignmentsCategory,
             dueDate: q3Date
         },
         {
-            name: 'Research',
+            name: 'Q3.12 Promotion Poster',
             competency: assignmentsCategory,
             dueDate: q3Date
         },
         {
-            name: 'AOK Progress',
+            name: 'Q3.13 Title & Special Request Form',
             competency: assignmentsCategory,
             dueDate: q3Date
         },
         {
-            name: 'Q3 Attendance',
+            name: 'Q3.14 Completed Q2',
             competency: assignmentsCategory,
             dueDate: q3Date
         },
         {
-            name: 'Q2 Work Done',
-            competency: assignmentsCategory,
-            dueDate: q3Date
-        },
-        {
-            name: '*Q3 Assignment Summary',
+            name: 'Q3.15 Assignment Summary Q3',
             competency: skillsCategory,
             dueDate: q3Date
         },
         {
-            name: 'Practice Presentation',
+            name: 'Q4.16 Practice Presentation',
             competency: assignmentsCategory,
-            dueDate: q4Date
+            dueDate: q4ADate
         },
         {
-            name: 'Presentation',
+            name: 'Q4.17 Invitations',
             competency: assignmentsCategory,
-            dueDate: q4Date
+            dueDate: q4ADate
         },
         {
-            name: 'Q4 Attendance',
+            name: 'Q4.18 Thank You Notes',
             competency: assignmentsCategory,
-            dueDate: q4Date
+            dueDate: q4ADate
         },
         {
-            name: 'Q3 Work Done',
+            name: 'Q4.19 Presentation',
             competency: assignmentsCategory,
-            dueDate: q4Date
+            dueDate: q4BDate
         },
         {
-            name: '*Q4 Assignment Summary',
+            name: 'Q4.20 Completed Q3',
+            competency: assignmentsCategory,
+            dueDate: q4ADate
+        },
+        {
+            name: 'Q4.21 Assignment Summary Q4',
             competency: skillsCategory,
-            dueDate: q4Date
+            dueDate: q4BDate
         },
     ];
     const addAssignment = async (assignmentName, dueDateObj, category, sectionId) => {
@@ -92,7 +119,7 @@ javascript: (function() {
         const payload = {
             'standardcalcdirection': 'NONE',
             'standardscoringmethod': 'GradeScale',
-            'yearid': 31,
+            'yearid': 32,                               // confirm this with a test post
             '_assignmentsections': [{
             'description': '',
             'extracreditpoints': 0,
